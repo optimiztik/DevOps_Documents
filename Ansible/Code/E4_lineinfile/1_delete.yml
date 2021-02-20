@@ -1,0 +1,10 @@
+---
+  - hosts:
+    gather_facts: no
+    tasks:
+        - name: Delete line from a file /etc/sudoers
+          lineinfile:
+            path: /etc/sudoers
+            state: absent 
+            regexp: '^%wheel'
+          

@@ -1,0 +1,60 @@
+	✓	Open AWS account :
+	  ⁃	Link : https://aws.amazon.com/console/
+	  ⁃	Description : Cloud Platform
+
+	✓	Create account in docker hub :
+	  ⁃	Link : https://hub.docker.com/
+	  ⁃	Description : Public repo of docker images.
+
+	✓	Create account in GitHub :
+	  ⁃	Link : https://github.com/
+	  ⁃	Description : Source code repository.
+
+	✓	Download GIT bash :
+	  ⁃	Link : https://git-scm.com/downloads
+	  ⁃	Description :  Source control management system for Windows
+     
+	✓	Download Code Editor : 
+	  ⁃	Name : Visual studio code 
+	  ⁃	Download link : https://code.visualstudio.com/
+	  ⁃	Description : Code editor
+
+	✓	Install Docker Desktop : 
+	  ⁃	Link : https://docs.docker.com/desktop/
+	  ⁃	Description : 
+	    ⁃	Application helps to create docker container.
+	    ⁃	Download docker desktop according to your laptop os.
+	  ⁃	Prerequisite :
+	    ⁃	Virtualisation to be enabled in BIOS [Which requires reboot of machine]
+	    ⁃	Some cases, you may also need to enable HYPER-V
+	    -   How to enable HYPER-V in windows [Start —> Control panel —> Programs —> Under Programs and Features select “Turn Windows features on or off” —> Enable all the boxes which are relevant for HYPER-V]
+	  ⁃	Post install :
+	    ⁃	Start docker engine
+	    ⁃	Assign ample amount of resource to Docker engine.
+
+	✓	Create shared folder in your laptop & Map it to Docker.
+	  ⁃	Example : Create directory “shared” under [D drive].
+	  ⁃	Map the newly created drive in Docker Desktop
+
+	✓	Open “VScode”
+	  ⁃	Open your shared file which is newly created.
+	  ⁃	You can create/delete folder or file from VScode in shared folder.
+	  ⁃	Install plugins [Ansible, Terraform, Docker and Jenkins]
+	  ⁃	Open terminal from VScode.
+
+	✓	Docker check & login from terminal :
+	  ⁃	docker --version
+	  ⁃	docker login/logout
+
+	✓	Pull required images from docker hub : 
+	  ⁃	docker pull centos
+	  ⁃	Ensure, image is pulled to local machine using command “docker images”
+       
+	✓	Create new container :
+	  ⁃	docker run -t -d -v <shared-folder-location>:/data --name <container-name> <image-name>
+	  ⁃	[Sample : docker run -t -d -v D:/shared:/data --name terraform centos]
+
+	✓	Login into to container.
+	  ⁃	docker exec -it <container-name> bash
+	  ⁃	[Sample : docker exec -it terraform bash]
+	  ⁃	Ensure, sample file created under shared drive is visible in /data 

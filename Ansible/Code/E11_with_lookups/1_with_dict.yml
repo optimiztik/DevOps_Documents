@@ -1,0 +1,18 @@
+# Playbook using with_dict condition
+---
+  - hosts: dev
+    gather_facts: no
+    vars:
+      package:
+       apache: httpd
+       mail: ntp
+    tasks:
+      - name: Install packages
+        yum:
+         name: "{{ item.value }}"
+         state: present
+         with_dict: "{{ package }}"
+   
+   
+   
+

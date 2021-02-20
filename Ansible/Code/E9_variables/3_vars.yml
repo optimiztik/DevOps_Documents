@@ -1,0 +1,18 @@
+# Here we are going declare variables inside playbook using module "vars" (Dictionary method)
+# You can declare dictionaries in ansible as you would do in python script
+# you can always access any of the value using the key. 
+# In the following task, I am declaring a variable called ‘Apache’ which has 3 [‘key-value’] pairs inside. 
+# From following tasks you can print the whole dictionary structure.
+
+---
+  - hosts:
+    gather_facts: no
+    vars:
+      Apache:
+        Package: 'httpd'
+        Usage: 'Used to host web'
+        OS: 'Any Linux variant would be fine'
+    tasks:
+      - name: Ansible Dictionary Example
+        debug:
+          msg: "{{ Apache }}"

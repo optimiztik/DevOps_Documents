@@ -1,0 +1,19 @@
+# Here we are going declare variables inside playbook using module "vars" (Generic method)
+---
+  - hosts:
+    gather_facts: no
+    vars:
+      - package: httpd
+      - service: httpd
+    tasks:
+     - name: Install packages
+       yum:
+        name: '{{ package }}'
+        state: present
+       notify: restart apache
+    handlers:
+     - name: restart apache
+       service:
+         name: '{{ service }}'
+         state: restarted
+

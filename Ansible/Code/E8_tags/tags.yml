@@ -1,0 +1,13 @@
+---
+  - hosts:
+    gather_facts: no
+    tasks: 
+      - name: Install apache
+        yum: name=httpd state=present
+        tags: http
+      - name: Install ntp
+        yum: name=ntpd state=present
+        tags: ntp
+      - name: Install PHP
+        yum: name=php5 state=present
+

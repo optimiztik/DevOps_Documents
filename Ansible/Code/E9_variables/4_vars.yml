@@ -1,0 +1,13 @@
+# Here we are going declare variables inside playbook using module "vars" (Dictionary method)
+---
+  - hosts:
+    gather_facts: no
+    vars:
+      package:
+       apache: httpd
+       shell: zsh
+    tasks:
+      - name: Install packages
+        yum: name={{ package.apache }} state=present
+        ignore_errors: True
+   

@@ -1,0 +1,21 @@
+# Here we are going declare variables inside playbook using module "vars" (Array method)
+# We can also declare an array or list of variables in playbook. 
+# The following tasks shows how to declare an array variable in Ansible 
+# Also how to use the values. The variable name called hello here contains 4 values
+# and each one can be accessed using the index numbers (starting from zero).
+
+---
+  - hosts:
+    gather_facts: no
+    vars:
+      hello:
+        - World
+        - Asia
+        - South America
+        - North America
+    tasks:
+      - name: Ansible List variable Example
+        debug:
+          msg: "{{ hello[2] }}"
+  
+

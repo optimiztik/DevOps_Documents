@@ -1,0 +1,13 @@
+# Playbook using with_items condition
+---
+  - hosts: dev
+    gather_facts: no
+    tasks:
+      - name: Copy a single file
+        ansible.windows.win_copy:
+          src: windows_file
+          dest: C:\Users\Administrator\Documents\windows_file
+  
+   
+   
+

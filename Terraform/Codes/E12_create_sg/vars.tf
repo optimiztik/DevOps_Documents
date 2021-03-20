@@ -6,7 +6,7 @@ variable AWS_REGION {
 # VPC 
 variable "vpc" {
   default = {
-    id = "vpc-f9cf2e92"
+    id = "vpc-3dabf355"
     cidr = "172.31.0.0/16"
   }
 }

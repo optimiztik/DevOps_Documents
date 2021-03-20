@@ -1,10 +1,10 @@
 # Playbook using with_items condition
 ---
-  - hosts: dev
+  - hosts: all
     gather_facts: no
     tasks:
       - name: Install packages
-        yum: name={{ item }} state=present
+        dnf: name={{ item }} state=present
         with_items:
          - httpd
          - ntp

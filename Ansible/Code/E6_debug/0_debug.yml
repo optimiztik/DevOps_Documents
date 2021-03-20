@@ -1,5 +1,5 @@
 ---
-  - hosts:
+  - hosts: all
     gather_facts: yes
     tasks: 
       - name: Print the remote machine hostname & IP

@@ -5,5 +5,5 @@ variable AWS_REGION {
 
 # Image IDs
 variable "AMI" {
-  default = "ami-052c08d70def0ac62"
+  default = "ami-0a9d27a9f4f5c0efc"
 }

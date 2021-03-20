@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "http" {
-    ami = "ami-052c08d70def0ac62"
+    ami = "ami-0a9d27a9f4f5c0efc"
     instance_type = "t2.micro"
-    tags = {Name = "HTTPS_SERVER_PROD"}
+    tags = {Name = "WEB SERVER"}
 }

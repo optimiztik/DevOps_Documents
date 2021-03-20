@@ -6,7 +6,7 @@ variable AWS_REGION {
 # Image
 variable instance_data {
   default = {
-    ami = "ami-052c08d70def0ac62"
+    ami = "ami-0a9d27a9f4f5c0efc"
     type = "t2.micro"
     name = "http_server"
     drive = "/dev/sdh"

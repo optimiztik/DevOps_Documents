@@ -1,7 +1,8 @@
 ---
-  - hosts:
-    remote_users: apache
-    become: true
+  - name: Sample playbook
+    hosts: all
+    # remote_user: apache
+    # become: true
     tasks:
         - name: Install apache
           yum:
@@ -12,6 +13,6 @@
             name: php5
             state: present
         - name: Apache service restart
-          service: 
+          service:
             name: httpd
             state: restarted

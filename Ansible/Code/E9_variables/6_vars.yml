@@ -1,6 +1,6 @@
 # In this example we are going pass variables from command line at run time using vars_prompt
 ---
-  - hosts:
+  - hosts: all
     gather_facts: no
     vars_prompt:
       - name: Package

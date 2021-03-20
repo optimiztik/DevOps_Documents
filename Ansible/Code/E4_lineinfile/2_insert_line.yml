@@ -1,9 +1,9 @@
 ---
-  - hosts:
+  - hosts: all
     gather_facts: no
     tasks:
         - name: Insert new line into a file
           lineinfile:
             path: /etc/hosts
-            line: 172.22.84.10 myhost.example.com myhost
+            line: 13.233.152.46 myhost.example.com redhat
           

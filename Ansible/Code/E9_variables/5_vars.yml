@@ -1,6 +1,6 @@
 # In this example we are going pass this variables from command line using Extra_vars
 ---
-  - hosts:
+  - hosts: all
     gather_facts: no
     tasks: 
       - name: Install {{ package }}

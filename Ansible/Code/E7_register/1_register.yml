@@ -1,6 +1,6 @@
 # In this example we are combining Register with Debug
 ---
-  - hosts:
+  - hosts: all
     gather_facts: yes
     tasks: 
       - name: Get uptime
@@ -8,5 +8,5 @@
         register: result
       - name: Print results
         debug:
-          var: result  
+          var: result.rc
 # We can also use “var” submodule here instead of “msg”

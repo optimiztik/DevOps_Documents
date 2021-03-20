@@ -7,7 +7,7 @@ variable AWS_REGION {
 variable instance_data {
   default = {
     count = "5"
-    ami = "ami-052c08d70def0ac62"
+    ami = "ami-0a9d27a9f4f5c0efc"
     type = "t2.micro"
   }
 }

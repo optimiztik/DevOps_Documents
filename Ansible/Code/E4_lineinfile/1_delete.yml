@@ -1,5 +1,5 @@
 ---
-  - hosts:
+  - hosts: all
     gather_facts: no
     tasks:
         - name: Delete line from a file /etc/sudoers

@@ -1,7 +1,7 @@
 ---
-  - hosts:
-    remote_users: apache
-    become: true
+  - hosts: all
+    # remote_users: apache
+    # become: true
     tasks:
         - name: Install apache
           yum:

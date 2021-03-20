@@ -1,6 +1,6 @@
 # Here we are going declare variables inside playbook using module "vars" (Generic method)
 ---
-  - hosts:
+  - hosts: all
     gather_facts: no
     vars:
       - package: httpd

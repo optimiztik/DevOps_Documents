@@ -1,10 +1,9 @@
 ---
-  - hosts:
+  - hosts: redhat
     gather_facts: no
     tasks:
         - name: Ensures Selinux set to enforcing mode
           lineinfile:
             path: /etc/selinux/config
             regexp: '^SELINUX='
-            line: SELINUX=enforcing
-          
+            line: SELINUX=disabled

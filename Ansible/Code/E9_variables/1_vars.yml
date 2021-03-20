@@ -5,17 +5,17 @@
 # and each one can be accessed using the index numbers (starting from zero).
 
 ---
-  - hosts:
+  - hosts: all
     gather_facts: no
     vars:
-      hello:
-        - World
-        - Asia
-        - South America
-        - North America
+      package:
+        - git
+        - ansible
+        - python
+        - terraform
     tasks:
       - name: Ansible List variable Example
         debug:
-          msg: "{{ hello[2] }}"
+          msg: "{{ package[2] }}"
   
 

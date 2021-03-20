@@ -1,10 +1,10 @@
 ---
-  - hosts:
+  - hosts: all
     gather_facts: no
     tasks:
         - name: Insert new line into a file if file not exist
           lineinfile:
-            path: /etc/hosts
+            path: /tmp/hosts
             line: 192.168.1.99 foo.lab.net foo
             create: yes
 

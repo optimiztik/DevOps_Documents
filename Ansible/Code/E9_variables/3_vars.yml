@@ -5,7 +5,7 @@
 # From following tasks you can print the whole dictionary structure.
 
 ---
-  - hosts:
+  - hosts: all
     gather_facts: no
     vars:
       Apache:
@@ -13,6 +13,7 @@
         Usage: 'Used to host web'
         OS: 'Any Linux variant would be fine'
     tasks:
+      
       - name: Ansible Dictionary Example
         debug:
-          msg: "{{ Apache }}"
+          msg: "{{ Apache.OS }}"
